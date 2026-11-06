@@ -1,0 +1,13 @@
+# SSH Forward Manager example configuration
+# One ssh -L command per line. Edit host aliases and ports to suit your environment.
+# Host aliases can be defined in %USERPROFILE%\.ssh\config.
+# Lines beginning with # and blank lines are ignored.
+
+# Local RDP port 13389 -> example-rdp:localhost:3389
+ssh -f -N -L 13389:localhost:3389 example-rdp
+
+# Local HTTPS port 20443 -> example-web:localhost:443
+ssh -f -N -L 20443:localhost:443 example-web
+
+# Example with an explicit user and host (uncomment and adjust):
+# ssh -f -N -L 15432:localhost:5432 user@example.org
